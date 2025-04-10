@@ -8,6 +8,7 @@ import { Footer } from "./components/Footer";
 import { SeeAllPage } from "./pages/SeeAllPage";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
+import { AdvisorProfilePage } from "./pages/AdvisorProfilePage";
 import type { Advisor } from "./types";
 
 // Sample data - in a real app, this would come from an API
