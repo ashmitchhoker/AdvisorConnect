@@ -7,6 +7,7 @@ import { ServicesSection } from "./components/ServicesSection";
 import { Footer } from "./components/Footer";
 import { SeeAllPage } from "./pages/SeeAllPage";
 import LoginPage from "./pages/LoginPage";
+import SignupPage from "./pages/SignupPage";
 import type { Advisor } from "./types";
 
 // Sample data - in a real app, this would come from an API
@@ -115,6 +116,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
         <Route
           path="/analysts"
           element={<SeeAllPage type="analyst" advisors={sampleAnalysts} />}
