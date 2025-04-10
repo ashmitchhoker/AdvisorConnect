@@ -127,6 +127,10 @@ function App() {
             <SeeAllPage type="distributor" advisors={sampleDistributors} />
           }
         />
+        <Route
+          path="/advisor/:id"
+          element={<AdvisorProfilePage advisors={[...sampleAnalysts, ...sampleDistributors]} />}
+        />
       </Routes>
     </Router>
   );
