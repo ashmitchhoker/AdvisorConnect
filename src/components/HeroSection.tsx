@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom'; // Assuming react-router-dom is used
 
 export function HeroSection() {
   return (
@@ -19,10 +20,13 @@ export function HeroSection() {
               <button className="rounded-full bg-blue-600 px-8 py-3 text-white hover:bg-blue-700">
                 Get Started
               </button>
-              <button className="group rounded-full border-2 border-blue-600 px-8 py-3 text-blue-600 hover:bg-blue-50">
+              <Link 
+                to="/analysts" 
+                className="group rounded-full border-2 border-blue-600 px-8 py-3 text-blue-600 hover:bg-blue-50"
+              >
                 View Advisors
                 <ArrowRight className="ml-2 inline-block h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </button>
+              </Link>
             </div>
           </div>
           <div className="relative">
