@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Star, Languages, CheckCircle } from 'lucide-react';
 import type { Advisor } from '../types';
 
@@ -49,12 +48,9 @@ export function AdvisorCard({ advisor }: AdvisorCardProps) {
         </div>
       </div>
 
-      <Link
-        to={`/advisor/${advisor.id}`}
-        className="mt-4 block w-full rounded-full bg-blue-600 py-2 text-center text-white transition-colors hover:bg-blue-700"
-      >
+      <button className="mt-4 w-full rounded-full bg-blue-600 py-2 text-white transition-colors hover:bg-blue-700">
         View Profile
-      </Link>
+      </button>
     </div>
   );
 }
