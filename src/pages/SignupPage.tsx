@@ -24,8 +24,24 @@ const SignupPage = () => {
       return;
     }
 
-    // TODO: Implement actual signup logic here
-    navigate("/login");
+    try {
+      // Basic validation
+      if (!email.includes('@') || password.length < 6) {
+        setError("Invalid email or password too short (min 6 characters)");
+        return;
+      }
+      
+      // Here you would typically make an API call to create the user
+      // For now, we'll just simulate success and redirect
+      console.log('Signup successful:', { name, email });
+      
+      // Redirect to login page
+      navigate("/login", { 
+        state: { message: "Signup successful! Please login." }
+      });
+    } catch (err) {
+      setError("Failed to create account. Please try again.");
+    }
   };
 
   return (
