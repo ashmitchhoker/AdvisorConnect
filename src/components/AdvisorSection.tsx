@@ -11,7 +11,7 @@ interface AdvisorSectionProps {
 
 export function AdvisorSection({ title, advisors, type }: AdvisorSectionProps) {
   return (
-    <section className="py-12">
+    <section id="advisorSection" className="py-12">
       <div className="container mx-auto px-4">
         <div className="mb-8 flex items-center justify-between">
           <h2 className="text-2xl font-bold">{title}</h2>
@@ -23,7 +23,7 @@ export function AdvisorSection({ title, advisors, type }: AdvisorSectionProps) {
             <ChevronRight className="ml-1 h-5 w-5 transition-transform group-hover:translate-x-1" />
           </a>
         </div>
-        
+
         <div className="relative">
           <div className="flex space-x-6 overflow-x-auto pb-4">
             {advisors.map((advisor) => (

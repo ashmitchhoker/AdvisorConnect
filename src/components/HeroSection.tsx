@@ -17,16 +17,22 @@ export function HeroSection() {
               tailored to your investment goals.
             </p>
             <div className="mt-8 flex space-x-4">
-              <button className="rounded-full bg-blue-600 px-8 py-3 text-white hover:bg-blue-700">
-                Get Started
-              </button>
               <Link 
-                to="/analysts" 
+                to="/signup"
+                className="rounded-full bg-blue-600 px-8 py-3 text-white hover:bg-blue-700"
+              >
+                Get Started
+              </Link>
+              <button 
+                onClick={() => {
+                  const advisorSection = document.getElementById('advisorSection');
+                  advisorSection?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="group rounded-full border-2 border-blue-600 px-8 py-3 text-blue-600 hover:bg-blue-50"
               >
                 View Advisors
                 <ArrowRight className="ml-2 inline-block h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Link>
+              </button>
             </div>
           </div>
           <div className="relative">
